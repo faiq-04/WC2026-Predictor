@@ -2,7 +2,7 @@
 
 > A machine learning application that predicts FIFA World Cup 2026 match outcomes using a Random Forest classifier trained on **49,433 international football matches** spanning 1872–2026.
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://wc2026-predictor.streamlit.app)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://wc-predictor2026.streamlit.app/)
 ![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-1.3+-orange.svg)
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
@@ -11,7 +11,7 @@
 
 ##  Live Demo
 
- **[Try the app here](https://wc2026-predictor.streamlit.app)**
+ **[Try the app here](https://wc-predictor2026.streamlit.app/)**
 
 ---
 
