@@ -415,7 +415,7 @@ elif page == "⚔️ Head-to-Head Predictor":
     with col3:
         away_team = st.selectbox("✈️ Team B (Away)", WC2026_TEAMS, index=WC2026_TEAMS.index("Brazil"))
 
-    is_wc = st.checkbox("World Cup match (knockout rules)", value=True)
+    is_wc = st.checkbox("Knockout rules (no draws, extra time/penalties)", value=True)
 
     if st.button("🔮 Predict Match", type="primary", use_container_width=True):
         if home_team == away_team:
@@ -425,6 +425,12 @@ elif page == "⚔️ Head-to-Head Predictor":
             hw = probs.get('Home Win', 0)
             dp = probs.get('Draw', 0)
             aw = probs.get('Away Win', 0)
+
+            if is_wc:
+                denom = hw + aw + 1e-9
+                hw += dp * (hw / denom)
+                aw += dp * (aw / denom)
+                dp = 0.0
 
             st.markdown("### Predicted Probabilities")
             c1, c2, c3 = st.columns(3)
